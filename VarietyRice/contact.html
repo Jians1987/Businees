@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulk Orders | The Rice Heritage of Salem</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .contact-container {
+      padding: 150px 5% 100px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .contact-info {
+      padding: 40px;
+      background: var(--primary-color);
+      color: var(--white);
+      border-radius: 16px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .contact-info h2 {
+      color: var(--white);
+      margin-bottom: 20px;
+      font-size: 2.2rem;
+    }
+
+    .contact-info p {
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+
+    .info-item i {
+      font-size: 24px;
+      color: var(--secondary-color);
+    }
+
+    .contact-form {
+      padding: 40px;
+      background: var(--white);
+      border-radius: 16px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .contact-form h3 {
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+      color: var(--dark-bg);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(230, 81, 0, 0.1);
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="scrolled">
+    <a href="index.html" class="logo"><i class="fa-solid fa-bowl-rice"></i> The Rice <span>Heritage</span></a>
+
+    <button class="mobile-menu-btn">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Our Menu</a>
+      <a href="about.html">Our Story</a>
+      <a href="contact.html" class="active">Bulk Orders</a>
+      <a href="contact.html" class="btn btn-primary nav-btn">Order Now</a>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact-container">
+    <div class="contact-info reveal delay-1">
+      <h2>Catering & Bulk Orders</h2>
+      <p>Perfect for corporate lunches, family gatherings, Poojas, and events. Minimum order quantity for direct
+        catering is 20 boxes. Get authentic taste at unbeatable value.</p>
+
+      <div class="info-item">
+        <i class="fa-solid fa-phone"></i>
+        <span>+91 999999999</span>
+      </div>
+      <div class="info-item">
+        <i class="fa-solid fa-envelope"></i>
+        <span>catering@riceheritagesalem.com</span>
+      </div>
+      <div class="info-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Cloud Kitchen Hub, Business District</span>
+      </div>
+
+      <div style="margin-top: 50px;">
+        <h3 style="color:var(--white); font-family:var(--font-sans); margin-bottom: 15px; font-size:1.2rem;">Single
+          Orders Delivery via</h3>
+        <div style="display:flex; gap:15px;">
+          <button class="btn" style="background:var(--white); color:#E23744; font-weight:700;">ZOMATO</button>
+          <button class="btn" style="background:var(--white); color:#FC8019; font-weight:700;">SWIGGY</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form reveal delay-2">
+      <h3>Request a Quote</h3>
+      <form action="#" method="POST"
+        onsubmit="event.preventDefault(); alert('Inquiry Sent! We will contact you shortly.');">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" placeholder="Email Address" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" class="form-control" placeholder="Phone Number" required>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Event Type & Expected Guest Count">
+        </div>
+        <div class="form-group">
+          <textarea class="form-control"
+            placeholder="Tell us about your requirements (e.g. 50 Lemon Rice + 50 Tamarind Rice combos)..."
+            required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><i class="fa-solid fa-bowl-rice"></i> The Rice <span>Heritage</span></a>
+        <p>Bringing authentic and comforting variety rice straight to your doorstep.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+          <li><a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 The Rice Heritage. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

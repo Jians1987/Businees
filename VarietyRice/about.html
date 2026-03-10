@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story | The Rice Heritage</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .about-header {
+      padding: 150px 5% 50px;
+      text-align: center;
+      background: var(--light-bg);
+    }
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      padding: 50px 5% 100px;
+      align-items: center;
+    }
+    .about-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+    }
+    .about-text p {
+      font-size: 1.1rem;
+      color: var(--text-main);
+      margin-bottom: 20px;
+    }
+    .about-image {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: var(--shadow-lg);
+    }
+    @media (max-width: 768px) {
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="scrolled">
+    <a href="index.html" class="logo"><i class="fa-solid fa-bowl-rice"></i> The Rice <span>Heritage</span></a>
+    
+    <button class="mobile-menu-btn">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Our Menu</a>
+      <a href="about.html" class="active">Our Story</a>
+      <a href="contact.html">Bulk Orders</a>
+      <a href="contact.html" class="btn btn-primary nav-btn">Order Now</a>
+    </nav>
+  </header>
+
+  <!-- About Header -->
+  <section class="about-header">
+    <span class="section-subtitle animate-up">Our Journey</span>
+    <h1 class="section-title animate-up delay-1">Tradition in Every Bite</h1>
+  </section>
+
+  <!-- About Content -->
+  <section class="about-content">
+    <div class="about-text reveal delay-1">
+      <h2>Rooted in Authenticity</h2>
+      <p>The Rice Heritage was born out of a simple desire: to bring the comforting, authentic, and deeply flavorful rice dishes of traditional South Indian homes to the modern, fast-paced world.</p>
+      <p>Operating as a premium cloud kitchen, we focus entirely on quality, hygiene, and taste. We use slow-roasted spices, farm-fresh ingredients, and traditional stone-ground techniques to prepare our base masalas.</p>
+      <p>Whether you are a bachelor missing home, a corporate team seeking a delicious lunch, or someone who simply loves pure, vegetarian comfort food—we cook for you with the same love and precision as a home kitchen.</p>
+    </div>
+    <div class="reveal delay-2">
+      <!-- Reusing hero image for context, or could be a kitchen shot -->
+      <img src="file:///C:/Users/jeein/.gemini/antigravity/brain/d72fa2c3-065e-4936-9f61-3ec3bd0325a1/variety_rice_hero_1773127442870.png" alt="Traditional Cooking" class="about-image">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><i class="fa-solid fa-bowl-rice"></i> The Rice <span>Heritage</span></a>
+        <p>Bringing authentic and comforting variety rice straight to your doorstep.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+          <li><a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 The Rice Heritage. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
