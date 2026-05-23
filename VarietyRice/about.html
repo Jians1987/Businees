@@ -3,20 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Story | The Rice Heritage</title>
+  <title>Our Story | The Rice Heritage - Authentic Cloud Kitchen</title>
+  <meta name="description" content="Learn about The Rice Heritage — a premium cloud kitchen in Salem serving authentic South Indian variety rice using traditional recipes and farm-fresh ingredients.">
+  <meta property="og:title" content="Our Story | The Rice Heritage">
+  <meta property="og:description" content="Our journey from a home kitchen to Salem's favorite variety rice cloud kitchen.">
+  <meta property="og:image" content="images/kitchen.png">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🍚</text></svg>">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     .about-header {
-      padding: 150px 5% 50px;
+      padding: 150px 5% 60px;
       text-align: center;
-      background: var(--light-bg);
+      background: linear-gradient(135deg, var(--light-bg), #FFF8F0);
+    }
+    .about-header p {
+      max-width: 650px;
+      margin: 20px auto 0;
+      color: var(--text-light);
+      font-size: 1.1rem;
     }
     .about-content {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 60px;
-      padding: 50px 5% 100px;
+      padding: 80px 5%;
       align-items: center;
     }
     .about-text h2 {
@@ -25,67 +36,250 @@
       color: var(--primary-color);
     }
     .about-text p {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: var(--text-main);
-      margin-bottom: 20px;
+      margin-bottom: 18px;
+      line-height: 1.8;
     }
     .about-image {
       width: 100%;
       border-radius: 20px;
       box-shadow: var(--shadow-lg);
     }
+
+    /* Values */
+    .values {
+      background: var(--white);
+      padding: 80px 5%;
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+    .value-card {
+      text-align: center;
+      padding: 40px 25px;
+      border-radius: 16px;
+      background: var(--light-bg);
+      transition: var(--transition);
+    }
+    .value-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-md);
+    }
+    .value-icon {
+      width: 70px; height: 70px;
+      background: rgba(230, 81, 0, 0.08);
+      color: var(--primary-color);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 28px;
+      margin: 0 auto 20px;
+    }
+    .value-card h3 { font-family: var(--font-sans); font-size: 1.2rem; margin-bottom: 10px; }
+    .value-card p { color: var(--text-light); font-size: 0.93rem; }
+
+    /* Journey Timeline */
+    .journey {
+      background: linear-gradient(135deg, var(--dark-bg), var(--dark-surface));
+      color: var(--white);
+      padding: 80px 5%;
+    }
+    .journey .section-header h2 { color: var(--white); }
+    .timeline {
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 20px; top: 0; bottom: 0;
+      width: 2px;
+      background: var(--primary-color);
+    }
+    .timeline-item {
+      padding-left: 55px;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 12px; top: 5px;
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: var(--primary-color);
+      border: 3px solid var(--dark-bg);
+    }
+    .timeline-item .year {
+      color: var(--secondary-color);
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .timeline-item h3 { color: var(--white); font-family: var(--font-sans); font-size: 1.2rem; margin: 5px 0 8px; }
+    .timeline-item p { color: var(--text-light); font-size: 0.95rem; }
+
+    /* Ingredients */
+    .ingredients {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      padding: 80px 5%;
+      align-items: center;
+    }
+    .ingredients img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: var(--shadow-lg);
+    }
+    .ingredients-text h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+    }
+    .ingredients-text p {
+      color: var(--text-main);
+      font-size: 1.05rem;
+      margin-bottom: 15px;
+      line-height: 1.8;
+    }
+    .ingredient-list { margin-top: 20px; }
+    .ingredient-list li {
+      padding: 8px 0;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .ingredient-list li i { color: var(--accent-green); }
+
     @media (max-width: 768px) {
-      .about-content {
-        grid-template-columns: 1fr;
-      }
+      .about-content { grid-template-columns: 1fr; }
+      .ingredients { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
   <header class="scrolled">
     <a href="index.html" class="logo"><i class="fa-solid fa-bowl-rice"></i> The Rice <span>Heritage</span></a>
-    
-    <button class="mobile-menu-btn">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-
-    <nav class="nav-links">
+    <button class="mobile-menu-btn" aria-label="Toggle navigation menu"><i class="fa-solid fa-bars"></i></button>
+    <nav class="nav-links" role="navigation">
       <a href="index.html">Home</a>
       <a href="menu.html">Our Menu</a>
       <a href="about.html" class="active">Our Story</a>
       <a href="contact.html">Bulk Orders</a>
-      <a href="contact.html" class="btn btn-primary nav-btn">Order Now</a>
+      <a href="menu.html" class="btn btn-primary nav-btn">Order Now</a>
     </nav>
   </header>
 
-  <!-- About Header -->
   <section class="about-header">
     <span class="section-subtitle animate-up">Our Journey</span>
     <h1 class="section-title animate-up delay-1">Tradition in Every Bite</h1>
+    <p class="animate-up delay-2">From a humble home kitchen to Salem's favorite cloud kitchen — our passion for authentic South Indian flavors drives everything we do.</p>
   </section>
 
-  <!-- About Content -->
   <section class="about-content">
     <div class="about-text reveal delay-1">
       <h2>Rooted in Authenticity</h2>
       <p>The Rice Heritage was born out of a simple desire: to bring the comforting, authentic, and deeply flavorful rice dishes of traditional South Indian homes to the modern, fast-paced world.</p>
       <p>Operating as a premium cloud kitchen, we focus entirely on quality, hygiene, and taste. We use slow-roasted spices, farm-fresh ingredients, and traditional stone-ground techniques to prepare our base masalas.</p>
-      <p>Whether you are a bachelor missing home, a corporate team seeking a delicious lunch, or someone who simply loves pure, vegetarian comfort food—we cook for you with the same love and precision as a home kitchen.</p>
+      <p>Whether you are a bachelor missing home, a corporate team seeking a delicious lunch, or someone who simply loves pure, vegetarian comfort food — we cook for you with the same love and precision as a home kitchen.</p>
     </div>
     <div class="reveal delay-2">
-      <!-- Reusing hero image for context, or could be a kitchen shot -->
-      <img src="file:///C:/Users/jeein/.gemini/antigravity/brain/d72fa2c3-065e-4936-9f61-3ec3bd0325a1/variety_rice_hero_1773127442870.png" alt="Traditional Cooking" class="about-image">
+      <img src="images/kitchen.png" alt="Our Traditional Kitchen" class="about-image" loading="lazy">
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Our Values -->
+  <section class="values">
+    <div class="section-header">
+      <span class="section-subtitle">What We Stand For</span>
+      <h2 class="section-title">Our Core Values</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card reveal delay-1">
+        <div class="value-icon"><i class="fa-solid fa-heart"></i></div>
+        <h3>Made with Love</h3>
+        <p>Every dish is prepared with the same care and affection as cooking for our own family.</p>
+      </div>
+      <div class="value-card reveal delay-2">
+        <div class="value-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>100% Hygienic</h3>
+        <p>FSSAI certified kitchen with strict hygiene protocols and regular quality audits.</p>
+      </div>
+      <div class="value-card reveal delay-3">
+        <div class="value-icon"><i class="fa-solid fa-leaf"></i></div>
+        <h3>Pure Vegetarian</h3>
+        <p>Dedicated 100% vegetarian kitchen. No compromises on purity, ever.</p>
+      </div>
+      <div class="value-card reveal delay-4">
+        <div class="value-icon"><i class="fa-solid fa-clock"></i></div>
+        <h3>Always On Time</h3>
+        <p>We understand the value of your time. Punctual delivery is our promise.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey Timeline -->
+  <section class="journey reveal">
+    <div class="section-header">
+      <span class="section-subtitle">Our Milestones</span>
+      <h2 class="section-title">The Journey So Far</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="year">2024</span>
+        <h3>The Idea is Born</h3>
+        <p>Started experimenting with family recipes in a small home kitchen, perfecting each variety rice dish.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="year">2025</span>
+        <h3>Cloud Kitchen Launch</h3>
+        <p>Officially launched The Rice Heritage on Zomato & Swiggy. Received our first 100 orders within the first week!</p>
+      </div>
+      <div class="timeline-item">
+        <span class="year">2025</span>
+        <h3>Corporate Catering Begins</h3>
+        <p>Partnered with 50+ corporate offices in Salem for daily lunch deliveries and event catering.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="year">2026</span>
+        <h3>5,000+ Meals & Growing</h3>
+        <p>Crossed 5,000 meals delivered with a 4.8-star average rating. Expanded our menu to 6 signature dishes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ingredients -->
+  <section class="ingredients">
+    <div class="reveal delay-1">
+      <img src="images/spices.png" alt="Traditional South Indian Spices" loading="lazy">
+    </div>
+    <div class="ingredients-text reveal delay-2">
+      <h2>Our Secret? The Ingredients.</h2>
+      <p>We believe great food starts with great ingredients. Every element in our kitchen is carefully sourced for authenticity and freshness.</p>
+      <ul class="ingredient-list">
+        <li><i class="fa-solid fa-check"></i> Aged Sona Masoori rice from local farms</li>
+        <li><i class="fa-solid fa-check"></i> Cold-pressed sesame and groundnut oil</li>
+        <li><i class="fa-solid fa-check"></i> Hand-picked curry leaves & coriander</li>
+        <li><i class="fa-solid fa-check"></i> Stone-ground spice blends, no preservatives</li>
+        <li><i class="fa-solid fa-check"></i> Fresh tamarind paste made in-house</li>
+        <li><i class="fa-solid fa-check"></i> Pure A2 curd for our signature curd rice</li>
+      </ul>
+    </div>
+  </section>
+
   <footer>
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="logo"><i class="fa-solid fa-bowl-rice"></i> The Rice <span>Heritage</span></a>
-        <p>Bringing authentic and comforting variety rice straight to your doorstep.</p>
+        <p>Bringing authentic and comforting variety rice straight to your doorstep in Salem.</p>
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>
@@ -99,8 +293,8 @@
         <h4>Support</h4>
         <ul>
           <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Terms of Service</a></li>
+          <li><a href="contact.html">Bulk Orders</a></li>
+          <li><a href="contact.html">Catering</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -108,15 +302,16 @@
         <ul>
           <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
           <li><a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
-          <li><a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+          <li><a href="#"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 The Rice Heritage. All Rights Reserved.</p>
+      <p>&copy; 2026 The Rice Heritage. All Rights Reserved. | Salem, Tamil Nadu</p>
     </div>
   </footer>
 
+  <button class="scroll-top" aria-label="Scroll to top"><i class="fa-solid fa-chevron-up"></i></button>
   <script src="script.js"></script>
 </body>
 </html>

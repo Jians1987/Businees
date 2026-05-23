@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | The Rice Heritage</title>
+  <meta name="description" content="Frequently asked questions about ordering, delivery, and our South Indian variety rice at The Rice Heritage.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .page-header {
+      padding: 150px 5% 80px;
+      text-align: center;
+      background: var(--light-bg);
+    }
+
+    .faq-container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 60px 5% 100px;
+    }
+
+    .faq-category {
+      margin-bottom: 60px;
+    }
+
+    .faq-category-title {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .faq-category-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(230, 81, 0, 0.2);
+    }
+
+    .faq-item {
+      background: var(--white);
+      border-radius: 12px;
+      border: 1px solid rgba(0, 0, 0, 0.07);
+      margin-bottom: 16px;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .faq-item:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 24px 28px;
+      text-align: left;
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      color: var(--dark-bg);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .faq-question:hover {
+      color: var(--primary-color);
+    }
+
+    .faq-question i {
+      color: var(--primary-color);
+      font-size: 0.9rem;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.open .faq-question i {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 400px;
+    }
+
+    .faq-answer-inner {
+      padding: 0 28px 24px;
+      color: var(--text-light);
+      font-size: 1rem;
+      line-height: 1.8;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+      padding-top: 20px;
+    }
+
+    .faq-cta {
+      background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+      border-radius: 16px;
+      padding: 50px 40px;
+      text-align: center;
+      color: var(--white);
+      margin-top: 40px;
+    }
+
+    .faq-cta h3 {
+      color: var(--white);
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+
+    .faq-cta p {
+      opacity: 0.9;
+      margin-bottom: 28px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .faq-cta .btn {
+      background: var(--white);
+      color: var(--primary-color);
+    }
+
+    .faq-cta .btn:hover {
+      background: var(--dark-bg);
+      color: var(--white);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="scrolled">
+    <a href="index.html" class="logo"><i class="fa-solid fa-bowl-rice"></i> The Rice <span>Heritage</span></a>
+
+    <button class="mobile-menu-btn">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Our Menu</a>
+      <a href="about.html">Our Story</a>
+      <a href="contact.html">Bulk Orders</a>
+      <a href="contact.html" class="btn btn-primary nav-btn">Order Now</a>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <span class="section-subtitle animate-up">Got Questions?</span>
+    <h1 class="section-title animate-up delay-1">Frequently Asked Questions</h1>
+    <p class="animate-up delay-2" style="max-width:600px; margin:20px auto; color:var(--text-light);">Everything you need to know about ordering, delivery, and our food. Can't find an answer? Reach out to us directly.</p>
+  </section>
+
+  <!-- FAQ Content -->
+  <div class="faq-container">
+
+    <!-- Ordering -->
+    <div class="faq-category reveal delay-1">
+      <p class="faq-category-title"><i class="fa-solid fa-cart-shopping"></i> Ordering</p>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          How do I place an order?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            You can place single orders through Zomato or Swiggy by searching for "The Rice Heritage". For bulk or catering orders of 20+ boxes, please fill out the enquiry form on our <a href="contact.html" style="color:var(--primary-color); font-weight:600;">Bulk Orders</a> page and we will get back to you within a few hours.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          What is the minimum order quantity for catering?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            For direct catering enquiries (corporate lunches, events, poojas), the minimum order is 20 meal boxes. There is no minimum for individual orders placed through Zomato or Swiggy.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Can I customize my rice box?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            For individual app-based orders, customizations may be limited to what is listed on the app. For bulk catering orders, we offer full customization — you can request specific rice varieties, adjust spice levels, and choose your preferred accompaniments (pickle, papad, raita). Just mention it in your inquiry.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Delivery -->
+    <div class="faq-category reveal delay-2">
+      <p class="faq-category-title"><i class="fa-solid fa-motorcycle"></i> Delivery</p>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          What areas do you deliver to?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Delivery areas are determined by the Zomato and Swiggy delivery radius active on our listing. For bulk catering orders, we can arrange direct delivery to your location within Salem. Contact us to discuss logistics for outstation events.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          How long does delivery take?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Typical delivery time for individual orders is 30–45 minutes depending on your location and order volume. For bulk orders, we coordinate a specific delivery time slot with you in advance.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          What packaging do you use?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            We use premium, leak-proof, eco-friendly containers made from sustainable materials. Our packaging is designed to retain heat during transit while keeping accompaniments like pickle and papad crisp and separate.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Food & Ingredients -->
+    <div class="faq-category reveal delay-3">
+      <p class="faq-category-title"><i class="fa-solid fa-leaf"></i> Food & Ingredients</p>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Is all your food vegetarian?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Yes! The Rice Heritage is a 100% pure vegetarian cloud kitchen. We do not use any meat, fish, or eggs in any of our preparations.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Do you use any preservatives or artificial flavors?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Absolutely not. All our rice dishes are prepared fresh to order using whole spices, farm-fresh ingredients, and traditional stone-ground masalas. No artificial preservatives, colors, or flavor enhancers are used.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Can you accommodate dietary restrictions or allergies?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            We do our best to accommodate dietary needs. Common allergens in our kitchen include peanuts (used in Lemon Rice) and sesame seeds (used in Tamarind Rice). Please contact us before ordering if you have severe allergies so we can advise accordingly. For bulk orders, allergen-free batches can be prepared on request.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Still have questions CTA -->
+    <div class="faq-cta reveal">
+      <h3>Still have a question?</h3>
+      <p>Our team is happy to help. Reach out to us directly for catering inquiries or any other questions.</p>
+      <a href="contact.html" class="btn">Contact Us</a>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><i class="fa-solid fa-bowl-rice"></i> The Rice <span>Heritage</span></a>
+        <p>Bringing authentic and comforting variety rice straight to your doorstep.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+          <li><a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 The Rice Heritage. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -3,19 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Menu | The Rice Heritage</title>
+  <title>Our Menu | The Rice Heritage - South Indian Variety Rice</title>
+  <meta name="description" content="Explore our menu of authentic South Indian variety rice. Lemon, Tamarind, Curd, Coconut, Tomato rice and more. Order online in Salem.">
+  <meta property="og:title" content="Our Menu | The Rice Heritage">
+  <meta property="og:description" content="Explore 6 signature variety rice dishes, freshly prepared with traditional spices.">
+  <meta property="og:image" content="images/lemon-rice.png">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🍚</text></svg>">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     .page-header {
       padding: 150px 5% 80px;
       text-align: center;
-      background: var(--light-bg);
+      background: linear-gradient(135deg, var(--light-bg), #FFF8F0);
     }
     .menu-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 35px;
       padding: 0 5% 100px;
     }
     .menu-item {
@@ -24,23 +29,24 @@
       overflow: hidden;
       box-shadow: var(--shadow-sm);
       transition: var(--transition);
-      border: 1px solid rgba(0,0,0,0.05);
+      border: 1px solid rgba(0,0,0,0.04);
     }
     .menu-item:hover {
-      transform: translateY(-10px);
+      transform: translateY(-8px);
       box-shadow: var(--shadow-lg);
     }
     .menu-image {
       width: 100%;
-      height: 250px;
+      height: 260px;
       object-fit: cover;
+      transition: transform 0.5s ease;
     }
-    .menu-content {
-      padding: 30px;
-    }
+    .menu-item:hover .menu-image { transform: scale(1.05); }
+    .menu-image-wrapper { overflow: hidden; }
+    .menu-content { padding: 28px; }
     .menu-title {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
+      font-size: 1.4rem;
+      margin-bottom: 8px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -49,35 +55,67 @@
       color: var(--primary-color);
       font-family: var(--font-sans);
       font-weight: 700;
+      font-size: 1.2rem;
     }
     .menu-desc {
       color: var(--text-light);
       margin-bottom: 20px;
-      font-size: 0.95rem;
+      font-size: 0.93rem;
+      line-height: 1.6;
     }
     .badge {
       display: inline-block;
-      padding: 4px 10px;
-      background: rgba(230, 81, 0, 0.1);
+      padding: 4px 12px;
+      background: rgba(230, 81, 0, 0.08);
       color: var(--primary-color);
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       border-radius: 20px;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
       font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .badge-green {
+      background: rgba(46, 125, 50, 0.08);
+      color: var(--accent-green);
+    }
+    .badge-gold {
+      background: rgba(251, 192, 45, 0.15);
+      color: #B8860B;
+    }
+    .menu-includes {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      padding-top: 15px;
+      border-top: 1px solid rgba(0,0,0,0.06);
+      margin-top: 15px;
+    }
+    .menu-includes i { color: var(--accent-green); margin-right: 5px; }
+    .combo-banner {
+      background: linear-gradient(135deg, var(--dark-bg), var(--dark-surface));
+      color: var(--white);
+      text-align: center;
+      padding: 80px 5%;
+    }
+    .combo-banner h2 { color: var(--white); font-size: 2.5rem; margin-bottom: 15px; }
+    .combo-banner p { font-size: 1.15rem; margin-bottom: 30px; max-width: 600px; margin-left:auto; margin-right:auto; color: var(--text-light); }
+    .combo-banner .btn { background: linear-gradient(135deg, var(--primary-color), var(--primary-light)); color: var(--white); }
+
+    @media (max-width: 768px) {
+      .menu-grid { grid-template-columns: 1fr; }
+      .combo-banner h2 { font-size: 1.8rem; }
     }
   </style>
 </head>
 <body>
 
   <!-- Header -->
-  <header class="scrolled"> <!-- Force scrolled state for inner pages -->
+  <header class="scrolled">
     <a href="index.html" class="logo"><i class="fa-solid fa-bowl-rice"></i> The Rice <span>Heritage</span></a>
-    
-    <button class="mobile-menu-btn">
+    <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
       <i class="fa-solid fa-bars"></i>
     </button>
-
-    <nav class="nav-links">
+    <nav class="nav-links" role="navigation">
       <a href="index.html">Home</a>
       <a href="menu.html" class="active">Our Menu</a>
       <a href="about.html">Our Story</a>
@@ -90,43 +128,89 @@
   <section class="page-header">
     <span class="section-subtitle animate-up">Delicious & Authentic</span>
     <h1 class="section-title animate-up delay-1">Explore Our Menu</h1>
-    <p class="animate-up delay-2" style="max-width: 600px; margin: 20px auto; color: var(--text-light);">Freshly prepared single-serve variety rice boxes, perfect for your daily cravings or office lunches. Served with pickle and papad.</p>
+    <p class="animate-up delay-2" style="max-width: 650px; margin: 20px auto 0; color: var(--text-light); font-size: 1.1rem;">Freshly prepared single-serve variety rice boxes, perfect for your daily cravings or office lunches. Every box comes with pickle, papad & a side.</p>
   </section>
 
   <!-- Menu Grid -->
   <section class="menu-grid">
-    <!-- Item 1 -->
     <div class="menu-item reveal delay-1">
-      <img src="file:///C:/Users/jeein/.gemini/antigravity/brain/d72fa2c3-065e-4936-9f61-3ec3bd0325a1/lemon_rice_1773127486553.png" alt="Lemon Rice" class="menu-image">
+      <div class="menu-image-wrapper">
+        <img src="images/lemon-rice.png" alt="Classic Lemon Rice" class="menu-image" loading="lazy">
+      </div>
       <div class="menu-content">
-        <span class="badge">Best Seller</span>
+        <span class="badge">🔥 Best Seller</span>
         <h3 class="menu-title">Classic Lemon Rice <span class="menu-price">₹120</span></h3>
-        <p class="menu-desc">Tangy, zesty, and refreshing Chitranna infused with fresh turmeric, roasted peanuts, and tempered mustard seeds.</p>
-        <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;">Order on Zomato</a>
+        <p class="menu-desc">Tangy, zesty, and refreshing Chitranna infused with fresh turmeric, roasted peanuts, and tempered mustard seeds. Our most ordered dish!</p>
+        <div class="menu-includes"><i class="fa-solid fa-check-circle"></i> Served with pickle, papad & raita</div>
       </div>
     </div>
 
-    <!-- Item 2 -->
     <div class="menu-item reveal delay-2">
-      <img src="file:///C:/Users/jeein/.gemini/antigravity/brain/d72fa2c3-065e-4936-9f61-3ec3bd0325a1/tamarind_rice_1773127504042.png" alt="Tamarind Rice" class="menu-image">
+      <div class="menu-image-wrapper">
+        <img src="images/tamarind-rice.png" alt="Spicy Tamarind Rice" class="menu-image" loading="lazy">
+      </div>
       <div class="menu-content">
-        <span class="badge">Spicy</span>
+        <span class="badge">🌶️ Spicy</span>
         <h3 class="menu-title">Spicy Tamarind Rice <span class="menu-price">₹140</span></h3>
-        <p class="menu-desc">Authentic Puliyogare made with a dark, rich tamarind paste, jaggery, sesame seeds, and a blend of secret spices.</p>
-        <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;">Order on Zomato</a>
+        <p class="menu-desc">Authentic Puliyogare made with dark, rich tamarind paste, jaggery, sesame seeds, and a blend of secret temple-style spices.</p>
+        <div class="menu-includes"><i class="fa-solid fa-check-circle"></i> Served with pickle, papad & chips</div>
       </div>
     </div>
 
-    <!-- Item 3 -->
     <div class="menu-item reveal delay-3">
-      <img src="file:///C:/Users/jeein/.gemini/antigravity/brain/d72fa2c3-065e-4936-9f61-3ec3bd0325a1/curd_rice_1773127520261.png" alt="Curd Rice" class="menu-image">
+      <div class="menu-image-wrapper">
+        <img src="images/curd-rice.png" alt="Creamy Curd Rice" class="menu-image" loading="lazy">
+      </div>
       <div class="menu-content">
-        <span class="badge">Comfort</span>
+        <span class="badge badge-green">🧊 Comfort</span>
         <h3 class="menu-title">Creamy Curd Rice <span class="menu-price">₹110</span></h3>
-        <p class="menu-desc">Soothing Thayir Sadam mixed with fresh cream, tempered with green chilies and topped with pomegranate seeds.</p>
-        <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;">Order on Zomato</a>
+        <p class="menu-desc">Soothing Thayir Sadam mixed with fresh cream, tempered with green chilies, and topped with pomegranate seeds for a cool finish.</p>
+        <div class="menu-includes"><i class="fa-solid fa-check-circle"></i> Served with pickle & vadagam</div>
       </div>
     </div>
+
+    <div class="menu-item reveal delay-1">
+      <div class="menu-image-wrapper">
+        <img src="images/coconut-rice.png" alt="Coconut Rice" class="menu-image" loading="lazy">
+      </div>
+      <div class="menu-content">
+        <span class="badge badge-gold">✨ Premium</span>
+        <h3 class="menu-title">Coconut Rice <span class="menu-price">₹130</span></h3>
+        <p class="menu-desc">Fragrant Thengai Sadam with freshly grated coconut, crunchy cashews, and aromatic curry leaves tempered in pure ghee.</p>
+        <div class="menu-includes"><i class="fa-solid fa-check-circle"></i> Served with pickle, papad & appalam</div>
+      </div>
+    </div>
+
+    <div class="menu-item reveal delay-2">
+      <div class="menu-image-wrapper">
+        <img src="images/tomato-rice.png" alt="Tomato Rice" class="menu-image" loading="lazy">
+      </div>
+      <div class="menu-content">
+        <span class="badge">🍅 Popular</span>
+        <h3 class="menu-title">Tomato Rice <span class="menu-price">₹120</span></h3>
+        <p class="menu-desc">Vibrant Thakkali Sadam bursting with the flavors of vine-ripened tomatoes, onions, and a special masala that makes it irresistible.</p>
+        <div class="menu-includes"><i class="fa-solid fa-check-circle"></i> Served with pickle, papad & raita</div>
+      </div>
+    </div>
+
+    <div class="menu-item reveal delay-3">
+      <div class="menu-image-wrapper">
+        <img src="images/spices.png" alt="Chef's Special Combo" class="menu-image" loading="lazy">
+      </div>
+      <div class="menu-content">
+        <span class="badge badge-gold">👨‍🍳 Chef's Pick</span>
+        <h3 class="menu-title">Chef's Trio Combo <span class="menu-price">₹299</span></h3>
+        <p class="menu-desc">Can't decide? Try our curated trio of mini portions — pick any 3 rice varieties and experience the full spectrum of South Indian flavors.</p>
+        <div class="menu-includes"><i class="fa-solid fa-check-circle"></i> Served with 3 pickles, papad & dessert</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Combo Banner -->
+  <section class="combo-banner reveal">
+    <h2>Ordering for a Group?</h2>
+    <p>Get special bulk pricing for 10+ boxes. Perfect for corporate lunches, family functions, and religious ceremonies.</p>
+    <a href="contact.html" class="btn">Get Bulk Quote</a>
   </section>
 
   <!-- Footer -->
@@ -134,7 +218,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="logo"><i class="fa-solid fa-bowl-rice"></i> The Rice <span>Heritage</span></a>
-        <p>Bringing authentic and comforting variety rice straight to your doorstep.</p>
+        <p>Bringing authentic and comforting variety rice straight to your doorstep in Salem.</p>
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>
@@ -148,8 +232,8 @@
         <h4>Support</h4>
         <ul>
           <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Terms of Service</a></li>
+          <li><a href="contact.html">Bulk Orders</a></li>
+          <li><a href="contact.html">Catering</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -157,15 +241,16 @@
         <ul>
           <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
           <li><a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
-          <li><a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+          <li><a href="#"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 The Rice Heritage. All Rights Reserved.</p>
+      <p>&copy; 2026 The Rice Heritage. All Rights Reserved. | Salem, Tamil Nadu</p>
     </div>
   </footer>
 
+  <button class="scroll-top" aria-label="Scroll to top"><i class="fa-solid fa-chevron-up"></i></button>
   <script src="script.js"></script>
 </body>
 </html>

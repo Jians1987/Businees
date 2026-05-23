@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Menu | The Rice Heritage</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .page-header {
+      padding: 150px 5% 80px;
+      text-align: center;
+      background: var(--light-bg);
+    }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+      padding: 0 5% 100px;
+    }
+    .menu-item {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+    .menu-item:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+    }
+    .menu-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .menu-content {
+      padding: 30px;
+    }
+    .menu-title {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .menu-price {
+      color: var(--primary-color);
+      font-family: var(--font-sans);
+      font-weight: 700;
+    }
+    .menu-desc {
+      color: var(--text-light);
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      background: rgba(230, 81, 0, 0.1);
+      color: var(--primary-color);
+      font-size: 0.8rem;
+      border-radius: 20px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="scrolled"> <!-- Force scrolled state for inner pages -->
+    <a href="index.html" class="logo"><i class="fa-solid fa-bowl-rice"></i> The Rice <span>Heritage</span></a>
+    
+    <button class="mobile-menu-btn">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="menu.html" class="active">Our Menu</a>
+      <a href="about.html">Our Story</a>
+      <a href="contact.html">Bulk Orders</a>
+      <a href="contact.html" class="btn btn-primary nav-btn">Order Now</a>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <span class="section-subtitle animate-up">Delicious & Authentic</span>
+    <h1 class="section-title animate-up delay-1">Explore Our Menu</h1>
+    <p class="animate-up delay-2" style="max-width: 600px; margin: 20px auto; color: var(--text-light);">Freshly prepared single-serve variety rice boxes, perfect for your daily cravings or office lunches. Served with pickle and papad.</p>
+  </section>
+
+  <!-- Menu Grid -->
+  <section class="menu-grid">
+    <!-- Item 1 -->
+    <div class="menu-item reveal delay-1">
+      <img src="file:///C:/Users/jeein/.gemini/antigravity/brain/d72fa2c3-065e-4936-9f61-3ec3bd0325a1/lemon_rice_1773127486553.png" alt="Lemon Rice" class="menu-image">
+      <div class="menu-content">
+        <span class="badge">Best Seller</span>
+        <h3 class="menu-title">Classic Lemon Rice <span class="menu-price">₹120</span></h3>
+        <p class="menu-desc">Tangy, zesty, and refreshing Chitranna infused with fresh turmeric, roasted peanuts, and tempered mustard seeds.</p>
+        <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;">Order on Zomato</a>
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="menu-item reveal delay-2">
+      <img src="file:///C:/Users/jeein/.gemini/antigravity/brain/d72fa2c3-065e-4936-9f61-3ec3bd0325a1/tamarind_rice_1773127504042.png" alt="Tamarind Rice" class="menu-image">
+      <div class="menu-content">
+        <span class="badge">Spicy</span>
+        <h3 class="menu-title">Spicy Tamarind Rice <span class="menu-price">₹140</span></h3>
+        <p class="menu-desc">Authentic Puliyogare made with a dark, rich tamarind paste, jaggery, sesame seeds, and a blend of secret spices.</p>
+        <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;">Order on Zomato</a>
+      </div>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="menu-item reveal delay-3">
+      <img src="file:///C:/Users/jeein/.gemini/antigravity/brain/d72fa2c3-065e-4936-9f61-3ec3bd0325a1/curd_rice_1773127520261.png" alt="Curd Rice" class="menu-image">
+      <div class="menu-content">
+        <span class="badge">Comfort</span>
+        <h3 class="menu-title">Creamy Curd Rice <span class="menu-price">₹110</span></h3>
+        <p class="menu-desc">Soothing Thayir Sadam mixed with fresh cream, tempered with green chilies and topped with pomegranate seeds.</p>
+        <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;">Order on Zomato</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><i class="fa-solid fa-bowl-rice"></i> The Rice <span>Heritage</span></a>
+        <p>Bringing authentic and comforting variety rice straight to your doorstep.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+          <li><a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 The Rice Heritage. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
